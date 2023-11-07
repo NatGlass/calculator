@@ -48,6 +48,14 @@ function equals() {
 
   if (operator === "+") {
     result = add(parsedNum1, parsedNum2);
+  } else if (operator === "x") {
+    result = multiply(parsedNum1, parsedNum2);
+  } else if (operator === "÷") {
+    result = divide(parsedNum1, parsedNum2);
+  } else if (operator === "-") {
+    result = subtract(parsedNum1, parsedNum2);
+  } else {
+    return;
   }
 
   updateDisplay(result);
@@ -55,4 +63,16 @@ function equals() {
 
 function add(num1, num2) {
   return num1 + num2;
+}
+
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
+function divide(num1, num2) {
+  return num1 / num2;
 }
